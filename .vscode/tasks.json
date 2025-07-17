@@ -1,0 +1,109 @@
+{
+    // tasks.json
+    // VSCode task definitions for development workflow
+    //
+    // FUNCTIONS:
+    // - "Run All Tests" - Executes test_runner.py for comprehensive testing
+    // - "Run Swift Tests" - Runs swift test command for unit tests
+    // - "Run Xcode Tests" - Runs xcodebuild test for integration tests
+    // - "Build Project" - Builds the macOS app using xcodebuild
+    // - "Clean Build" - Cleans build artifacts and temporary files
+    // - Provides consistent development commands accessible via Cmd+Shift+P
+    //
+    // Created by WingLik Choi on 7/16/25.
+    
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run All Tests",
+            "type": "shell",
+            "command": "python3",
+            "args": ["test_runner.py"],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Swift Tests",
+            "type": "shell",
+            "command": "swift",
+            "args": ["test", "--verbose"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Xcode Tests",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "test",
+                "-project", "InterviewMonitor/InterviewMonitor.xcodeproj",
+                "-scheme", "InterviewMonitor",
+                "-destination", "platform=macOS"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Project",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project", "InterviewMonitor/InterviewMonitor.xcodeproj",
+                "-scheme", "InterviewMonitor",
+                "-destination", "platform=macOS",
+                "build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project", "InterviewMonitor/InterviewMonitor.xcodeproj",
+                "-scheme", "InterviewMonitor",
+                "-destination", "platform=macOS",
+                "clean"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
