@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F43C26742E28787D00AA39A9 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = F43C26732E28787D00AA39A9 /* FirebaseCore */; };
+		F43C26762E28787D00AA39A9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F43C26752E28787D00AA39A9 /* FirebaseDatabase */; };
+		F43C26862E2881E500AA39A9 /* cleaner in CopyFiles */ = {isa = PBXBuildFile; fileRef = F43C267B2E287F4700AA39A9 /* cleaner */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F43C26462E28776600AA39A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,10 +29,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F43C26792E287F4700AA39A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F43C26822E28817E00AA39A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				F43C26862E2881E500AA39A9 /* cleaner in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F43C26342E28776500AA39A9 /* InterviewMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C26452E28776600AA39A9 /* InterviewMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C264F2E28776600AA39A9 /* InterviewMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43C267B2E287F4700AA39A9 /* cleaner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cleaner; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,6 +74,11 @@
 			path = InterviewMonitorUITests;
 			sourceTree = "<group>";
 		};
+		F43C267C2E287F4700AA39A9 /* cleaner */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = cleaner;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43C26762E28787D00AA39A9 /* FirebaseDatabase in Frameworks */,
+				F43C26742E28787D00AA39A9 /* FirebaseCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +105,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F43C26782E287F4700AA39A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +121,7 @@
 				F43C26362E28776500AA39A9 /* InterviewMonitor */,
 				F43C26482E28776600AA39A9 /* InterviewMonitorTests */,
 				F43C26522E28776600AA39A9 /* InterviewMonitorUITests */,
+				F43C267C2E287F4700AA39A9 /* cleaner */,
 				F43C26352E28776500AA39A9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +132,7 @@
 				F43C26342E28776500AA39A9 /* InterviewMonitor.app */,
 				F43C26452E28776600AA39A9 /* InterviewMonitorTests.xctest */,
 				F43C264F2E28776600AA39A9 /* InterviewMonitorUITests.xctest */,
+				F43C267B2E287F4700AA39A9 /* cleaner */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +147,7 @@
 				F43C26302E28776500AA39A9 /* Sources */,
 				F43C26312E28776500AA39A9 /* Frameworks */,
 				F43C26322E28776500AA39A9 /* Resources */,
+				F43C26822E28817E00AA39A9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -112,6 +158,8 @@
 			);
 			name = InterviewMonitor;
 			packageProductDependencies = (
+				F43C26732E28787D00AA39A9 /* FirebaseCore */,
+				F43C26752E28787D00AA39A9 /* FirebaseDatabase */,
 			);
 			productName = InterviewMonitor;
 			productReference = F43C26342E28776500AA39A9 /* InterviewMonitor.app */;
@@ -163,6 +211,28 @@
 			productReference = F43C264F2E28776600AA39A9 /* InterviewMonitorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F43C267A2E287F4700AA39A9 /* cleaner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43C267F2E287F4700AA39A9 /* Build configuration list for PBXNativeTarget "cleaner" */;
+			buildPhases = (
+				F43C26772E287F4700AA39A9 /* Sources */,
+				F43C26782E287F4700AA39A9 /* Frameworks */,
+				F43C26792E287F4700AA39A9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F43C267C2E287F4700AA39A9 /* cleaner */,
+			);
+			name = cleaner;
+			packageProductDependencies = (
+			);
+			productName = cleaner;
+			productReference = F43C267B2E287F4700AA39A9 /* cleaner */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +254,9 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = F43C26332E28776500AA39A9;
 					};
+					F43C267A2E287F4700AA39A9 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = F43C262F2E28776500AA39A9 /* Build configuration list for PBXProject "InterviewMonitor" */;
@@ -195,6 +268,9 @@
 			);
 			mainGroup = F43C262B2E28776500AA39A9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F43C26722E28787D00AA39A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F43C26352E28776500AA39A9 /* Products */;
 			projectDirPath = "";
@@ -203,6 +279,7 @@
 				F43C26332E28776500AA39A9 /* InterviewMonitor */,
 				F43C26442E28776600AA39A9 /* InterviewMonitorTests */,
 				F43C264E2E28776600AA39A9 /* InterviewMonitorUITests */,
+				F43C267A2E287F4700AA39A9 /* cleaner */,
 			);
 		};
 /* End PBXProject section */
@@ -247,6 +324,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F43C264B2E28776600AA39A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43C26772E287F4700AA39A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -397,9 +481,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "monitor running applications";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSSystemAdministrationUsageDescription = detection;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -423,9 +509,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "monitor running applications";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSSystemAdministrationUsageDescription = detection;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -503,6 +591,24 @@
 			};
 			name = Release;
 		};
+		F43C26802E287F4700AA39A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F43C26812E287F4700AA39A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -542,7 +648,40 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F43C267F2E287F4700AA39A9 /* Build configuration list for PBXNativeTarget "cleaner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43C26802E287F4700AA39A9 /* Debug */,
+				F43C26812E287F4700AA39A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F43C26722E28787D00AA39A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F43C26732E28787D00AA39A9 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43C26722E28787D00AA39A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		F43C26752E28787D00AA39A9 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43C26722E28787D00AA39A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F43C262C2E28776500AA39A9 /* Project object */;
 }
