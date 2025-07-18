@@ -60,7 +60,7 @@ Interview Monitor is a third-party security application that monitors screen ove
 
 1. **Clone the Repository**
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/choiyilin/InterviewMonitor.git
    cd interview-monitor
    ```
 
